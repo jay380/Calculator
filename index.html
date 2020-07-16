@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+    }
+    #container {
+        width: 700px;
+        height: 600px;
+        border: 1px solid black;
+        margin: auto;
+        padding: 90px;
+        background-color: #fffbfb;
+    }
+    #mem {
+        position: relative;
+        bottom: 40px;
+        width: 510px;
+        height: 30px;
+    }
+    #btn {
+        width: 80px;
+        height: 30px;
+        float: right;
+    }
+    #display {
+        position: relative;
+        bottom: 16px;
+        padding: 20px;
+        border: 1px solid black;
+        font-size: 36px;
+
+    }
+    hr {
+        width: 878px;
+        border: 1px solid black;
+        position:relative;
+        right: 90px;
+    }
+    #calculation {
+        position: relative;
+        top: 15px;
+        right: 40px;
+        width: 100%;
+        height: 530px;
+        margin: 1px; 
+        padding: 5px 40px 5px 40px;
+        display: grid;
+        background-color: #252525;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-gap: 15px;
+        grid-template-areas:
+            "numbers operations"
+            "numbers send";
+    }
+    #numbers {
+        position: relative;
+        right: 20px;
+        background-color: dodgerblue;
+        padding: 15px 0px 15px 15px;
+        grid-area: numbers;
+        display: grid;
+        grid-template-columns: 80px 80px 80px;
+        grid-template-rows: 80px 80px 80px 80px;
+        grid-gap: 20px;
+       
+        
+    }
+    #operations {
+        position: relative;
+        left: 10px;
+        background-color: lightyellow;
+        padding: 15px 0px 15px 15px;
+        grid-area: operations;
+        display: grid;
+        grid-template-columns: 80px;
+        grid-template-rows: 80px 80px 80px 80px;
+        grid-gap: 20px;
+    }   
+    #send{
+        position: relative;
+        left: 10px;
+        background-color: lightpink;
+        grid-area: send;
+        padding: 15px 0px 15px 15px;
+        display: grid;
+        grid-template-columns: 100px 100px;
+        grid-gap: 20px;
+    }
+    .num {
+        background-color: lightgreen;
+        font-size: 36px;
+        position: relative;
+        left: 30px;
+        top: 30px;
+    }
+    .num:hover {
+        transform: scale(1.1);
+
+    }
+    .ops {
+        background-color: lightgreen;
+        font-size: 36px;
+        position: relative;
+        left: 95px;
+        top: 10px;
+    }
+    .ops:hover {
+        transform: scale(1.1);
+
+    }
+    #finish {
+        background-color: lightgreen;
+        font-size: 28px;
+        padding: 5px;
+        position: relative;
+        left: 30px;
+    }
+    #finish:hover {
+        transform: scale(1.1);
+
+    }
+    #clear {
+        background-color: lightgreen;
+        font-size: 28px;
+        padding: 5px;
+        position: relative;
+        left: 30px;
+    }
+    #clear:hover {
+        transform: scale(1.1);
+
+    }
+</style>
+<body>
+    <main>
+        <h1>Calculator</h1>
+        <div id="container">
+            <div id="mem"></div>
+            <button id="btn">Back</button>
+            <div id="displays">
+                <input type="text" id="display">
+            </div>
+            <hr>
+            <div id="calculation">
+                <div id="numbers">
+                    <button class="num">7</button>
+                    <button class="num">8</button>
+                    <button class="num">9</button>
+                    <button class="num">4</button>
+                    <button class="num">5</button>
+                    <button class="num">6</button>
+                    <button class="num">1</button>
+                    <button class="num">2</button>
+                    <button class="num">3</button>
+                    <button class="num">0</button>
+                    <button class="num">00</button>
+                    <button class="num">.</button>
+                </div>
+                <div id="operations">
+                    <button class="ops">+</button>
+                    <button class="ops">-</button>
+                    <button class="ops">*</button>
+                    <button class="ops">/</button>
+                </div>
+                <div id="send">
+                    <button id="finish">=</button>
+                    <button id="clear">Clear</button>
+                </div>
+            </div>
+        </div> 
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
